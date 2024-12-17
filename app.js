@@ -169,8 +169,17 @@ function showWines(wines) {
 
                 const wineDescription = document.querySelector('#description');
                 wineDescription.innerHTML = wine.description;
+            
+
+                const wineComments = document.querySelector('#wine-comments');
+                wine.comment.forEach(comment => {
+                    const commentItem = document.createElement('li');
+                    commentItem.classList.add('list-group-item');
+                    commentItem.innerHTML = `<strong>${comment.author}:</strong> ${comment.text}`;
+                    wineComments.appendChild(commentItem);
+                });
             }
-            //TODO Afficher le détail dans la zone de droite
         });
     });
 }
+          

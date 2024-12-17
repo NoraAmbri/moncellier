@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mon cellier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-8">
+                        <header>
+                            <img src="images/logo.jpg" alt="Mon Cellier" width="30">
+                            <h1 class="charm-bold">Mon Cellier</h1>
+                        </header>
+                    </div>
+                    <div class="col-4">MENU</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- SEARCH FORM -->
+                        <form id="frmSearch" action="#" method="get">
+                            <input type="search" name="keyword">
+                            <button id="btSearch">Rechercher</button>
+                        </form>
+
+                        <!-- FILTER FORM -->
+                        <form id="frmFilter" action="#" method="get">
+                            <select name="country">
+                                <option value="">All countries</option>
+                            </select>
+                            <select name="year">
+                                <option value="">All years</option>
+                                <option>2000</option>
+                                <option>2009</option>
+                                <option>2010</option>
+                            </select>
+                            <button id="btFilter">Filtrer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <ul class="list-group" id="wine-list">
+                    <li class="list-group-item active" aria-current="true">Block Nine</li>
+                    <li class="list-group-item">Bodega Lurton</li>
+                    <li class="list-group-item">Beaujolais</li>
+                    <li class="list-group-item">Pinot Noir</li>
+                  </ul>
+            </div>
+            <div class="col-xs-12 col">
+                <div class="row">
+                    <div class="col" id="wine-details">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="images/wine.jpg" class="img-fluid rounded-start" alt="wine">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><span class="badge text-bg-secondary">#15</span> <span class="wine-name">Beaujolais</span></h5>
+                                  <p class="card-text"><span class="wine-info">Grapes :</span> <span class="wine-grapes">Pinot noir</span></p>
+                                  <p class="card-text"><span class="wine-info">Country :</span> 
+                                    <span class="wine-country">France</span> <span class="country-flag"><img src="https://flagsapi.com/BE/flat/64.png"></span>
+                                  </p>
+                                  <p class="card-text"><span class="wine-info">Region :</span> <span class="wine-region">Bordeaux</span></p>
+                                  <p class="card-text"><span class="wine-info">Year :</span> <span class="wine-year">2000</span></p>
+                                  <p class="card-text"><span class="wine-info">Capacity :</span> <span class="wine-capacity">75 cl</span></p>
+                                  <p class="card-text"><span class="wine-info">Color :</span> <span class="wine-color">Rouge</span></p>
+                                  <p class="card-text"><span class="wine-info">Price :</span> <span class="wine-price">20 €</span></p>
+
+                                  <button type="button" class="btn btn-light"><i class="bi bi-camera"></i> Add a picture (1/3)</button>
+                                  <button type="button" class="btn btn-light"><i class="bi bi-pencil"></i> Add a note</button>
+                                  <button type="button" class="btn btn-light position-relative"><i class="bi bi-heart"></i> Like this wine
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        <span class="total-likes">99</span>
+                                        <span class="visually-hidden">total likes</span>
+                                      </span>
+                                    </button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="comments-tab" data-bs-toggle="tab" data-bs-target="#comments" type="button" role="tab" aria-controls="profile" aria-selected="false">Commentaires</button>
+
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab" aria-controls="contact" aria-selected="false">Notes personnelles</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">...DESC</div>
+                      <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">...COMM</div>
+                      <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">...NOTES</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <footer>
+                    &copy; EPFC - 2024
+                </footer>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
